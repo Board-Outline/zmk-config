@@ -18,4 +18,4 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-board: [ "ortholinear_kb" ]
+board: ["ortholinear_kb", "ortho_test"]
