@@ -7,19 +7,19 @@
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include "ortho_test-pinctrl.dtsi"
-#include "ortho_test-layouts.dtsi"
+#include "makro_kb-pinctrl.dtsi"
+#include "makro_kb-layouts.dtsi"
 
 / {
-    model = "ortho-test";
-    compatible = "ortho_test";
+    model = "Makro_KB";
+    compatible = "makro_kb";
 
     chosen {
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         // Uncomment this if you enabled one of the "vddh" nodes below.
-        zmk,battery = &vbatt;
+        // zmk,battery = &vbatt;
         zmk,physical-layout = &default_layout;
     };
 
@@ -36,19 +36,14 @@
 
         // Replace these comments with the GPIO pins in the matrix.
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
-
-        //FROM NICK - COMMON ON BOTH BOARDS
-        //COL - P0.08 P0.04 P0.25
-        //ROW - P1.13 P0.02 P0.29
-
         col-gpios
-            = <&gpio0 8 GPIO_ACTIVE_HIGH>
-            , <&gpio0 4 GPIO_ACTIVE_HIGH>
+            = <&gpio0 0 GPIO_ACTIVE_HIGH>
+            , <&gpio0 0 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&gpio0 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
@@ -65,23 +60,22 @@
         >;
     };
 
-    //TODO:
-    //leds {
-    //    compatible = "gpio-leds";
+    leds {
+        compatible = "gpio-leds";
 
         // If you have a GPIO routed to a status LED, set it here.
         // Otherwise, delete this block.
-    //    blue_led: led_0 {
-    //        gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
-    //    };
-    //};
+        blue_led: led_0 {
+            gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+        };
+    };
 
     // If you are powering the SoC from the VDDH pin, uncomment this block.
     // Otherwise, delete it.
 
-    vbatt: vbatt {
-         compatible = "zmk,battery-nrf-vddh";
-    };
+    // vbatt: vbatt {
+    //     compatible = "zmk,battery-nrf-vddh";
+    // };
 
     // If you are powering the SoC from the VDD pin and you have a voltage divider
     // routed to an analog pin to read the battery voltage, uncomment this block
@@ -96,21 +90,19 @@
     // };
 };
 
-//TODO TEST POWER CONSUMPTION WITH LDOs and DC-DCs
-
 // Uncomment this to switch from the LDO to the DC/DC regulator on REG0.
 // Do not enable the DC/DC regulator without an LC filter connected to the DCCH
 // pin, or the keyboard will not boot until an LC filter is connected.
-    &reg0 {
-        status = "okay";
-    };
+// &reg0 {
+//     status = "okay";
+// };
 
 // Uncomment this to switch from the LDO to the DC/DC regulator on REG1.
 // Do not enable the DC/DC regulator without an LC filter connected to the DCC
 // pin, or the keyboard will not boot until an LC filter is connected.
-    &reg1 {
-       regulator-initial-mode = <NRF5X_REG_MODE_DCDC>;
-    };
+// &reg1 {
+//     regulator-initial-mode = <NRF5X_REG_MODE_DCDC>;
+// };
 
 &adc {
     status = "okay";
@@ -128,13 +120,13 @@
     status = "okay";
 };
 
-//&uart0 {
-//    compatible = "nordic,nrf-uarte";
-//    current-speed = <115200>;
-//    pinctrl-0 = <&uart0_default>;
-//    pinctrl-1 = <&uart0_sleep>;
-//    pinctrl-names = "default", "sleep";
-//};
+&uart0 {
+    compatible = "nordic,nrf-uarte";
+    current-speed = <115200>;
+    pinctrl-0 = <&uart0_default>;
+    pinctrl-1 = <&uart0_sleep>;
+    pinctrl-names = "default", "sleep";
+};
 
 // If you use the NFC pins as GPIOs, uncomment this. Otherwise, remove it.
 // &uicr {
