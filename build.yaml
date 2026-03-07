@@ -18,10 +18,7 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-#board: ["ortholinear_kb", "ortho_test", "makro_kb"]
-#board: ["makro_kb"]
-
 include:
   - board: ortholinear_kb
-  - board: ortho_test
-  - board: makro_kb
+#  - board: ortho_test
+#  - board: makro_kb
