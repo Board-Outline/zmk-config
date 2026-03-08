@@ -43,7 +43,7 @@
 			&kp TAB  		&kp F20			 	&kp F19			 	&kp F18		 		&kp F17
 			&kp LSHFT  		&kp F16			 	&kp F15			 	&kp F14		 		&kp F13
 			&kp LCTRL  		&kp F21			 	&kp LA(F24)		 	&kp LA(F23)		 	&kp LA(F22)
-			&none  			&none  				&none  				&lt ARROWS ENTER	&lt ALT_LAYER SPACE	
+													  				&lt ARROWS ENTER	&lt ALT_LAYER SPACE	
 	
 			>;
 		};
@@ -55,7 +55,7 @@
 			&kp TAB				&kp LC(LS(LA(LEFT)))  	&kp UP				&kp LC(LS(LA(RIGHT)))	&kp LC(LS(LA(UP)))
 			&kp LC(LS(LA(H)))	&kp LEFT				&kp DOWN			&kp RIGHT				&kp LC(LS(LA(DOWN)))
 			&kp LCTRL			&none					&kp LC(LS(LA(H)))   &kp LC(LS(LA(V)))		&none
-			&none  				&none  					&none		  		&none					&mo ALT_LAYER
+																	  		&none					&mo ALT_LAYER
 
 			>;
 		};
@@ -67,7 +67,7 @@
 			&kp TAB  		&kp LS(LC(S))	 	&kp LC(W)		 	&kp LC(T)	 		&kp LC(F)
 			&kp LSHFT  		&kp LC(S)		 	&kp LC(X)		 	&kp LC(C) 			&kp LC(V)
 			&kp LCTRL  		&kp B			 	&kp LC(Z)		 	&kp LC(Y)	 		&kp ENTER
-			&none  			&none  				&none	   			&mo	ARROWS			&none
+														   			&mo	ARROWS			&none
 
 			>;
 		};
@@ -78,10 +78,18 @@
 			&bt BT_CLR 		&bt BT_SEL 0	&bt BT_SEL 1		&bt BT_SEL 2	&bt BT_SEL 3 
 			&bt BT_SEL 4 	&kp B 			&kp B 				&kp B 			&kp N3
 			&none  			&none  			&none  				&none  			&bootloader
-			&none  			&none  			&none  				&none  			&none
-			&none  			&none  			&none		  		&none  			&none
+			&none  			&none  			&none  				&none  			&studio_unlock
+														  		&none  			&none 	
 	
 			>;
 		};
+
+		extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
+        };
 	};
 };

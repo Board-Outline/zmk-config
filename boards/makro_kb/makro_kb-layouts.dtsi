@@ -14,10 +14,32 @@
         // if your keyboard will not support ZMK Studio.
         // https://zmk.dev/docs/development/hardware-integration/physical-layouts#optional-keys-property
         keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0    0       0     0     0>
-            , <&key_physical_attrs 100 100  100    0       0     0     0>
-            , <&key_physical_attrs 100 100    0  100       0     0     0>
-            , <&key_physical_attrs 100 100  100  100       0     0     0>
+            = <&key_physical_attrs 100 100    0   26       0     0     0>
+            , <&key_physical_attrs 100 100   95    0       0     0     0>
+            , <&key_physical_attrs 100 100  190    0       0     0     0>
+            , <&key_physical_attrs 100 100  284    0       0     0     0>
+            , <&key_physical_attrs 100 100  379    0       0     0     0>
+
+            , <&key_physical_attrs 100 100    0  116       0     0     0>
+            , <&key_physical_attrs 100 100   95   89       0     0     0>
+            , <&key_physical_attrs 100 100  190   89       0     0     0>
+            , <&key_physical_attrs 100 100  284   89       0     0     0>
+            , <&key_physical_attrs 100 100  379   89       0     0     0>
+
+            , <&key_physical_attrs 100 100    0  205       0     0     0>
+            , <&key_physical_attrs 100 100   95  179       0     0     0>
+            , <&key_physical_attrs 100 100  190  179       0     0     0>
+            , <&key_physical_attrs 100 100  284  179       0     0     0>
+            , <&key_physical_attrs 100 100  379  179       0     0     0>
+
+            , <&key_physical_attrs 100 100    0  295       0     0     0>
+            , <&key_physical_attrs 100 100   95  268       0     0     0>
+            , <&key_physical_attrs 100 100  190  268       0     0     0>
+            , <&key_physical_attrs 100 100  284  268       0     0     0>
+            , <&key_physical_attrs 100 100  379  268       0     0     0>
+
+            , <&key_physical_attrs 100 100  358  368       0     0     0>
+            , <&key_physical_attrs 100 100  450  429    2500   500   479>
             ;
-    };
+    };    
 };
