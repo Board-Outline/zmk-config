@@ -7,7 +7,7 @@
 ---
 
 include:
-  - board: ortho_test
+#  - board: ortho_test
   - board: ortholinear_kb
   - board: makro_kb
     snippet: studio-rpc-usb-uart
