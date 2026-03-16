@@ -19,7 +19,6 @@
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
-        // Uncomment this if you enabled one of the "vddh" nodes below.
         zmk,battery = &vbatt;
         zmk,physical-layout = &default_layout;
     };
@@ -68,35 +67,10 @@
                                        RC(4, 3) RC(4, 4)  
         >;
     };
-
-    //leds {
-    //    compatible = "gpio-leds";
-
-        // If you have a GPIO routed to a status LED, set it here.
-        // Otherwise, delete this block.
-        //blue_led: led_0 {
-        //    gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
-        //};
-    //};
-
     // If you are powering the SoC from the VDDH pin, uncomment this block.
-    // Otherwise, delete it.
-
     vbatt: vbatt {
          compatible = "zmk,battery-nrf-vddh";
     };
-
-    // If you are powering the SoC from the VDD pin and you have a voltage divider
-    // routed to an analog pin to read the battery voltage, uncomment this block
-    // and assign the correct ADC channel and resistance values.
-    // Otherwise, delete it.
-
-    // vbatt: vbatt {
-    //     compatible = "voltage-divider";
-    //     io-channels = <&adc 2>;
-    //     output-ohms = <2000000>;
-    //     full-ohms = <(2000000 + 806000)>;
-    // };
 };
 
 // Uncomment this to switch from the LDO to the DC/DC regulator on REG0.
@@ -128,19 +102,6 @@
 &gpio1 {
     status = "okay";
 };
-
-//&uart0 {
-//    compatible = "nordic,nrf-uarte";
-//    current-speed = <115200>;
-//    pinctrl-0 = <&uart0_default>;
-//    pinctrl-1 = <&uart0_sleep>;
-//    pinctrl-names = "default", "sleep";
-//};
-
-// If you use the NFC pins as GPIOs, uncomment this. Otherwise, remove it.
-// &uicr {
-//     nfct-pins-as-gpios;
-// };
 
 zephyr_udc0: &usbd {
     status = "okay";
