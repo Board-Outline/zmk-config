@@ -90,6 +90,24 @@ RC(6,0)  RC(6,1)  RC(6,2)  RC(6,3)  RC(6,4)  RC(6,5)  RC(6,6)  RC(6,7)  RC(6,8) 
         >;
     };
 
+    gpios {
+        compatible = "gpio-leds";
+
+        // If you have a GPIO routed to a status LED, set it here.
+        // Otherwise, delete this block.
+        led_1: led_1 {
+            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        };
+
+        led_2: led_2 {
+            gpios = <&gpio1  9 GPIO_ACTIVE_HIGH>;
+        };
+
+        led_3: led_3 {
+            gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
+        };
+    };
+
     // If you are powering the SoC from the VDDH pin, uncomment this block.
     // Otherwise, delete it.
 
