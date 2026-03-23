@@ -4,6 +4,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#include "elpekenin/behaviors.dtsi"
+
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
@@ -36,6 +38,20 @@
             >;
         };
 
+    };
+
+    layer_callbacks {
+        compatible = "elpekenin,layer-callback";
+        layer_on {
+            layer = <1>;
+            event = "on-activation";
+            bindings = <&gpio 0 GPIO_ON>;
+        };
+        layer_off {
+            layer = <1>;
+            event = "on-deactivation";
+            bindings = <&gpio 0 GPIO_OFF>;
+        };
     };
 
 
