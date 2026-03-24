@@ -6,13 +6,13 @@
 
 #include "elpekenin/behaviors.dtsi"
 
-#define MAIN 			0
-#define PCB             1
-#define ARROWS	  		2
-#define ALT_LAYER 		3
-#define BT_SET  		4
 
 / {
+    #define MAIN 			0
+    #define PCB             1
+    #define ARROWS	  		2
+    #define ALT_LAYER 		3
+    #define BT_SET  		4
 
     behaviors {
 		bdel: backspace_del {
@@ -33,7 +33,7 @@
 // &kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
 &bt BT_CLR &bt BT_SEL 0	&bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &studio_unlock &bootloader
 
-&kp ESC    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5          &kp F6    &mo 1     &kp F7          &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp N1
+&kp ESC    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5          &kp F6    &kp N1    &kp F7          &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp N1
 &kp GRAVE  &kp N1 &kp N2 &kp N3 &kp N4  &kp N5          &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
 &kp TAB    &kp Q  &kp W  &kp E  &kp R   &kp T           &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
 &kp CAPS   &kp A  &kp S  &kp D  &kp F   &kp G           &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
@@ -42,44 +42,44 @@
             >;
         };
 
-        pcb_layer {
-            bindings = <
-&kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
+//         pcb_layer {
+//             bindings = <
+// &kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
 
-&none &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp F6    &mo 1     &kp F7          &kp N1 &kp N2 &kp N3  &kp N4  &kp N5  &kp N1
-&none &kp ESC 	&kp F24	&kp F23		&kp F22		&bdel           &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
-&none &kp TAB   &kp F20	&kp F19	 	&kp F18		&kp F17         &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
-&none &kp LSHFT &kp F16	&kp F15		&kp F14		&kp F13         &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
-&none &kp LCTRL &kp F21	&kp LA(F24) &kp LA(F23)	&kp LA(F22)     &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
-&none &none     &none   &tog PCB    &lt ARROWS ENTER	&lt ALT_LAYER SPACE           &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &kp RET  &kp H &kp N1 &kp LALT &kp N1          &kp N0 &kp DOT &kp RET &kp RET
-            >;
-        };
+// &none &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp F6    &mo 1     &kp F7          &kp N1 &kp N2 &kp N3  &kp N4  &kp N5  &kp N1
+// &none &kp ESC 	&kp F24	&kp F23		&kp F22		&bdel           &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
+// &none &kp TAB   &kp F20	&kp F19	 	&kp F18		&kp F17         &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
+// &none &kp LSHFT &kp F16	&kp F15		&kp F14		&kp F13         &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
+// &none &kp LCTRL &kp F21	&kp LA(F24) &kp LA(F23)	&kp LA(F22)     &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
+// &none &none     &none   &tog PCB    &lt ARROWS ENTER	&lt ALT_LAYER SPACE           &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &kp RET  &kp H &kp N1 &kp LALT &kp N1          &kp N0 &kp DOT &kp RET &kp RET
+//             >;
+//         };
 
-        arrws_layer {
-            bindings = <
-&kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
+//         arrws_layer {
+//             bindings = <
+// &kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
 
-&none &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp F6    &mo 1     &kp F7          &kp N1 &kp N2 &kp N3  &kp N4  &kp N5  &kp N1
-&none &kp ESC	&none  	&none  		&none  		&none           &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
-&none &kp TAB	&kp LC(LS(LA(LEFT)))  &kp UP	&kp LC(LS(LA(RIGHT)))	&kp LC(LS(LA(UP)))        &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
-&none &kp LC(LS(LA(H)))	&kp LEFT	&kp DOWN	&kp RIGHT				&kp LC(LS(LA(DOWN)))         &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
-&none &kp LCTRL	&none	&kp LC(LS(LA(H)))   &kp LC(LS(LA(V)))	&none     &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
-&none &none     &none   &none       &none					&mo ALT_LAYER           &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &kp RET  &kp H &kp N1 &kp LALT &kp N1          &kp N0 &kp DOT &kp RET &kp RET
-            >;
-        };
+// &none &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp F6    &mo 1     &kp F7          &kp N1 &kp N2 &kp N3  &kp N4  &kp N5  &kp N1
+// &none &kp ESC	&none  	&none  		&none  		&none           &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
+// &none &kp TAB	&kp LC(LS(LA(LEFT)))  &kp UP	&kp LC(LS(LA(RIGHT)))	&kp LC(LS(LA(UP)))        &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
+// &none &kp LC(LS(LA(H)))	&kp LEFT	&kp DOWN	&kp RIGHT				&kp LC(LS(LA(DOWN)))         &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
+// &none &kp LCTRL	&none	&kp LC(LS(LA(H)))   &kp LC(LS(LA(V)))	&none     &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
+// &none &none     &none   &none       &none					&mo ALT_LAYER           &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &kp RET  &kp H &kp N1 &kp LALT &kp N1          &kp N0 &kp DOT &kp RET &kp RET
+//             >;
+//         };
 
-        control_layer {
-            bindings = <
-&kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
+//         control_layer {
+//             bindings = <
+// &kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
 
-&none &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp F6    &mo 1     &kp F7          &kp N1 &kp N2 &kp N3  &kp N4  &kp N5  &kp N1
-&none &kp ESC 		&kp 4			 	&kp LC(S)		 	&kp LS(LC(S)) 		&kp 7           &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
-&none &kp TAB  		&kp LS(LC(S))	 	&kp LC(W)		 	&kp LC(T)	 		&kp LC(F)        &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
-&none &kp LSHFT  		&kp LC(S)		 	&kp LC(X)		 	&kp LC(C) 			&kp LC(V)         &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
-&none &kp LCTRL  		&kp B			 	&kp LC(Z)		 	&kp LC(Y)	 		&kp ENTER     &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
-&none &none     &none   &none       &mo	ARROWS			&none           &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &kp RET  &kp H &kp N1 &kp LALT &kp N1          &kp N0 &kp DOT &kp RET &kp RET
-            >;
-        };
+// &none &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp F6    &mo 1     &kp F7          &kp N1 &kp N2 &kp N3  &kp N4  &kp N5  &kp N1
+// &none &kp ESC 		&kp 4			 	&kp LC(S)		 	&kp LS(LC(S)) 		&kp 7           &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
+// &none &kp TAB  		&kp LS(LC(S))	 	&kp LC(W)		 	&kp LC(T)	 		&kp LC(F)        &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
+// &none &kp LSHFT  		&kp LC(S)		 	&kp LC(X)		 	&kp LC(C) 			&kp LC(V)         &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
+// &none &kp LCTRL  		&kp B			 	&kp LC(Z)		 	&kp LC(Y)	 		&kp ENTER     &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
+// &none &none     &none   &none       &mo	ARROWS			&none           &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &kp RET  &kp H &kp N1 &kp LALT &kp N1          &kp N0 &kp DOT &kp RET &kp RET
+//             >;
+//         };
 
 
     };
