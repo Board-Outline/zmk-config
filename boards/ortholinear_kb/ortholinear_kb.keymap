@@ -84,7 +84,7 @@
 
     };
     
-    This can also be moved to the *.dts or some *.dsti file if desired.
+    //This can also be moved to the *.dts or some *.dsti file if desired.
     layer_callbacks {
         compatible = "elpekenin,layer-callback";
         layer_on {
