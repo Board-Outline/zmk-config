@@ -7,4 +7,8 @@ if BOARD_ORTHOLINEAR_KB
 # Define any board-specific Kconfig options here.
 # If there are none, you may delete this file.
 
+# Those are here for low power testing. 
+ CONFIG_ZMK_IDLE_TIMEOUT = 1000
+ CONFIG_ZMK_IDLE_SLEEP_TIMEOUT = 3000
+
 endif # BOARD_ORTHOLINEAR_KB
