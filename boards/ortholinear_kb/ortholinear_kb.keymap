@@ -103,7 +103,7 @@
 };
 
 
-&kscan {
-    debounce-press-ms = <8>;
-    debounce-release-ms = <8>;
-};
+// &kscan {
+//     debounce-press-ms = <8>;
+//     debounce-release-ms = <8>;
+// };
