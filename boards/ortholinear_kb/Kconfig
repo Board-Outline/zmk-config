@@ -7,7 +7,6 @@ if BOARD_ORTHOLINEAR_KB
 # Define any board-specific Kconfig options here.
 # If there are none, you may delete this file.
 
-CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=1000
-CONFIG_ZMK_KSCAN_DEBOUNCE_RELEASE_MS=1000
+
 
 endif # BOARD_ORTHOLINEAR_KB

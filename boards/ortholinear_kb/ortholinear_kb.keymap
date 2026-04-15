@@ -101,3 +101,9 @@
         };
     };
 };
+
+
+&kscan {
+    debounce-press-ms = <1000>;
+    debounce-release-ms = <1000>;
+};
