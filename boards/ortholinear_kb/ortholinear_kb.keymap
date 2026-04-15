@@ -100,10 +100,4 @@
             bindings = <&gpio 0 GPIO_OFF>;
         };
     };
-
-    &kscan0 {
-        debounce-press-ms = <7>;
-        debounce-release-ms = <7>;
-    };
-
 };
