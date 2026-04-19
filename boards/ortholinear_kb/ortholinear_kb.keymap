@@ -113,22 +113,21 @@
             event = "on-deactivation";
             bindings =  <&gpio 0 GPIO_OFF>;
         };
-    };
 
-    layer_callbacks {
         compatible = "elpekenin,layer-callback";
         layer_on {
             layer = <5>;
             event = "on-activation";
-            bindings =  <&gpio 0 GPIO_ON>;
+            bindings =  <&gpio 2 GPIO_ON>;
         };
         
         layer_off {
             layer = <5>;
             event = "on-deactivation";
-            bindings =  <&gpio 0 GPIO_OFF>;
+            bindings =  <&gpio 2 GPIO_OFF>;
         };
     };
+
 };
 
 &kscan {
