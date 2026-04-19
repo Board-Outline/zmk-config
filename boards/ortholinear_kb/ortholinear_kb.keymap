@@ -15,7 +15,6 @@
     #define ARROWS	  		2
     #define ALT_LAYER 		3
     #define BT_SET  		4
-    #define TE  		    5
 
     behaviors {
 		bdel: backspace_del {
@@ -41,7 +40,7 @@
 &kp TAB    &kp Q  &kp W  &kp E  &kp R   &kp T             &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
 &kp CAPS   &kp A  &kp S  &kp D  &kp F   &kp G             &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
 &kp LSHIFT &kp Z  &kp X  &kp C  &kp V   &kp B             &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
-&kp LCTRL  &kp LGUI &kp LALT &tog PCB &kp RET &kp SPACE   &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &none &tog TE &kp LALT &kp LGUI &kp LCTRL      &kp N0 &kp DOT &kp RET &kp RET
+&kp LCTRL  &kp LGUI &kp LALT &tog PCB &kp RET &kp SPACE   &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &none &none &kp LALT &kp LGUI &kp LCTRL      &kp N0 &kp DOT &kp RET &kp RET
             >;
         };
 
@@ -84,19 +83,6 @@
             >;
         };
 
-        test_layer {
-            bindings = <
-//&kp PSCRN  &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &bootloader
-&bt BT_CLR &bt BT_SEL 0	&bt BT_SEL 1 &out OUT_USB &out OUT_BLE &studio_unlock &bootloader &bootloader
-
-&kp N1     &kp F1 &kp F2 &kp F3 &kp F4  &kp F5            &kp F6    &kp N1    &kp F7          &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp N1
-&kp GRAVE  &kp N1 &kp N2 &kp N3 &kp N4  &kp N5            &kp SQT   &kp N1    &kp MINUS       &kp N6 &kp N7 &kp N8  &kp N9  &kp N0  &kp BSPC          &kp K_CALC  &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS
-&kp TAB    &kp Q  &kp W  &kp E  &kp R   &kp T             &kp LBKT  &kp EQUAL &kp RBKT        &kp Y  &kp U  &kp I   &kp O   &kp P   &kp N1            &kp N7 &kp N8  &kp N9 &kp KP_PLUS
-&kp CAPS   &kp A  &kp S  &kp D  &kp F   &kp G             &kp HOME  &kp DEL   &kp END         &kp H  &kp J  &kp K   &kp L   &kp SEMI &kp BSLH         &kp N4 &kp N5  &kp N6      
-&kp LSHIFT &kp Z  &kp X  &kp C  &kp V   &kp B             &kp PG_DN &kp UP    &kp PG_UP       &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHIFT   &kp N1 &kp N2  &kp N3
-&kp LCTRL  &kp LGUI &kp LALT &tog PCB &kp RET &kp SPACE   &kp LEFT  &kp DOWN  &kp RIGHT       &kp BSPC &kp RET &tog TE &kp LALT &kp LGUI &kp LCTRL    &kp N0 &kp DOT &kp RET &kp RET
-            >;
-        };
     };
     
     //This can also be moved to the *.dts or some *.dsti file if desired.
