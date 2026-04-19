@@ -107,9 +107,9 @@
             event = "on-activation";
             bindings =  <&gpio 0 GPIO_ON>;
 
-            layer = <5>;
-            event = "on-activation";
-            bindings =  <&gpio 2 GPIO_ON>;
+            // layer = <5>;
+            // event = "on-activation";
+            // bindings =  <&gpio 2 GPIO_ON>;
         };
         
         layer_off {
@@ -117,9 +117,9 @@
             event = "on-deactivation";
             bindings =  <&gpio 0 GPIO_OFF>;
 
-            layer = <5>;
-            event = "on-deactivation";
-            bindings =  <&gpio 2 GPIO_OFF>;
+            // layer = <5>;
+            // event = "on-deactivation";
+            // bindings =  <&gpio 2 GPIO_OFF>;
         };
     };
 
